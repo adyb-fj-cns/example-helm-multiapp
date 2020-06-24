@@ -5,7 +5,8 @@ create-app:
 		--dest-server https://kubernetes.default.svc \
 		--dest-namespace default \
 		--path . \
-		--upsert
+		
+#--upsert
 #--dest-server https://192.168.64.5:8443
 
 sync-app:
