@@ -6,6 +6,7 @@ create-app:
 		--dest-namespace default \
 		--path . \
 		--sync-policy automated \
+		--upsert
 
 sync-app:
 	argocd app sync example-helm-multiapp
