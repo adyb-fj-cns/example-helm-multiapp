@@ -5,8 +5,7 @@ create-app:
 		--dest-server https://192.168.64.5:8443 \
 		--dest-namespace default \
 		--path . \
-		--sync-policy automated \
-		--upsert
+		--sync-policy automated
 
 sync-app:
 	argocd app sync example-helm-multiapp
