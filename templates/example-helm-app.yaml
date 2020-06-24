@@ -10,9 +10,9 @@ metadata:
   namespace: example-helm-app
   finalizers: []
 spec:
-  #destination:
-  #  namespace: default
-  #  server: {{ .Values.spec.destination.server }}
+  destination:
+    namespace: default
+    server: {{ .Values.spec.destination.server }}
   project: default
   source:
     path: .
