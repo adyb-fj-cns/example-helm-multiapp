@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: example-helm-app
+---
+#apiVersion: argoproj.io/v1alpha1
+#kind: Application
+#metadata:
+#  name: example-helm-app
+#  namespace: default
+#  finalizers: []
+#spec:
+#  destination:
+#    namespace: default
+#    server: {{ .Values.spec.destination.server }}
+#  project: default
+#  source:
+#    path: .
+#    repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
+#    targetRevision: HEAD
