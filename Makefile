@@ -4,9 +4,7 @@ create-app:
 		--repo https://github.com/adyb-fj-cns/example-helm-multiapp.git \
 		--dest-server https://192.168.64.5:8443 \
 		--dest-namespace default \
-		--path . \
-		--sync-policy automated \
-		--upsert
+		--path .
 
 sync-app:
 	argocd app sync example-helm-multiapp
