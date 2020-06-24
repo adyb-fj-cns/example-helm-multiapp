@@ -1,8 +1,8 @@
 create-app:
 	argocd app create \
-		--name apps \
+		--name example-helm-multiapp \
 		--repo https://github.com/adyb-fj-cns/example-helm-multiapp.git \
-		--dest-server https://kubernetes.docker.internal:6443 \
+		--dest-server https://kubernetes.default.svc \
 		--dest-namespace default \
 		--path . \
 		--upsert
