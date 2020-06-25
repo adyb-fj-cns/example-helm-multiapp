@@ -55,5 +55,9 @@ kill-clusters:
 	minikube delete --profile argocd
 	minikube delete --profile apps
 
+stop-clusters:
+	minikube stop --profile argocd
+	minikube stop --profile apps
+
 #--dest-server https://192.168.64.5:8443
 #--dest-server https://kubernetes.default.svc
