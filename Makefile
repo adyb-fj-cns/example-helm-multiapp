@@ -2,7 +2,7 @@ create:
 	argocd app create \
 		--name example-helm-multiapp \
 		--repo https://github.com/adyb-fj-cns/example-helm-multiapp.git \
-		--dest-server https://192.168.64.5:8443 \
+		--dest-server https://192.168.64.8:8443 \
 		--dest-namespace default \
 		--path . \
 
@@ -10,7 +10,7 @@ fix:
 	argocd app create \
 		--name example-helm-multiapp \
 		--repo https://github.com/adyb-fj-cns/example-helm-multiapp.git \
-		--dest-server https://192.168.64.5:8443 \
+		--dest-server https://192.168.64.8:8443 \
 		--dest-namespace default \
 		--path . \
 		--upsert
