@@ -37,9 +37,11 @@ delete-rollouts:
 build-clusters:
 	minikube start --profile argocd
 	minikube addons enable ingress --profile argocd
+	minikube addons enable helm-tiller --profile argocd
 
 	minikube start --profile apps
 	minikube addons enable ingress --profile apps
+	minikube addons enable helm-tiller --profile apps
 
 	kubectx argocd
 	kubectl create namespace argocd
@@ -58,6 +60,11 @@ kill-clusters:
 stop-clusters:
 	minikube stop --profile argocd
 	minikube stop --profile apps
+
+start-clusters:
+	minikube start --profile argocd
+	minikube start --profile apps
+
 
 #--dest-server https://192.168.64.5:8443
 #--dest-server https://kubernetes.default.svc
