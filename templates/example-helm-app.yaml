@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: example-helm-app
+  name: {{printf "%s-%s" .name "example"}}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
