@@ -1,9 +1,4 @@
 {{- range .Values.clusters }}
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: {{printf "%s-%s" .name "example"}}
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -22,7 +17,7 @@ spec:
       selfHeal: true
   source:
     path: .
-    repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
-    targetRevision: HEAD
+    repoURL: {{ .repoURL }} 
+    targetRevision: {{ .targetRevision }}
 ---
 {{- end }}

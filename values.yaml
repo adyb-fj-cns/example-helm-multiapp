@@ -1,5 +1,12 @@
 clusters:
+# In cluster 
 - name: argocd
   destinationServer: https://kubernetes.default.svc
+  repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
+  targetRevision: HEAD
+  
+# External cluster
 - name: apps
   destinationServer: https://192.168.64.12:8443
+  repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
+  targetRevision: HEAD
