@@ -3,11 +3,11 @@ kind: Namespace
 metadata:
   name: example-helm-app
 ---
-#apiVersion: v1
-#kind: Namespace
-#metadata:
-#  name: another-namespace
-#---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: another-namespace
+---
 #apiVersion: argoproj.io/v1alpha1
 #kind: Application
 #metadata:
