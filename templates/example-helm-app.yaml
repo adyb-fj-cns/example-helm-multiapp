@@ -3,26 +3,21 @@ kind: Namespace
 metadata:
   name: example-helm-app
 ---
-apiVersion: v1
-kind: Namespace
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: another-namespace
----
-#apiVersion: argoproj.io/v1alpha1
-#kind: Application
-#metadata:
-#  name: example-helm-app
-#  namespace: example-helm-app
-#  finalizers:
-#  - resources-finalizer.argocd.argoproj.io
-#spec:
-#  destination:
-#    namespace: default
-#    server: {{ .Values.spec.destination.server }}
-#  project: default
-#  syncPolicy:
-#    automated: {}
-#  source:
-#    path: .
-#    repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
-#    targetRevision: HEAD
+  name: example-helm-app
+  namespace: example-helm-app
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  syncPolicy:
+    automated: {}
+  source:
+    path: .
+    repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
+    targetRevision: HEAD
