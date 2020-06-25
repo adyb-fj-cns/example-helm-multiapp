@@ -6,7 +6,7 @@ create:
 		--dest-namespace default \
 		--path . \
 
-overwrite:
+fix:
 	argocd app create \
 		--name example-helm-multiapp \
 		--repo https://github.com/adyb-fj-cns/example-helm-multiapp.git \
