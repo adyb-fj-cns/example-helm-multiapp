@@ -36,7 +36,10 @@ delete-rollouts:
 
 build-clusters:
 	minikube start --profile argocd
+	minikube addons enable ingress --profile argocd
+
 	minikube start --profile apps
+	minikube addons enable ingress --profile apps
 
 	kubectx argocd
 	kubectl create namespace argocd
