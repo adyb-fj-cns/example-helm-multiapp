@@ -5,6 +5,7 @@ create:
 		--dest-server https://kubernetes.default.svc \
 		--dest-namespace default \
 		--path . \
+		--sync-policy automated
 
 fix:
 	argocd app create \
@@ -13,6 +14,7 @@ fix:
 		--dest-server https://kubernetes.default.svc \
 		--dest-namespace default \
 		--path . \
+		--sync-policy automated \
 		--upsert
 sync:
 	argocd app sync example-helm-multiapp
