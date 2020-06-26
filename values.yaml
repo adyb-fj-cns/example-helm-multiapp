@@ -10,3 +10,9 @@ clusters:
   destinationServer: https://192.168.64.12:8443
   repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
   targetRevision: HEAD
+
+# External old cluster
+- name: apps
+  destinationServer: https://192.168.64.13:8443
+  repoURL: https://github.com/adyb-fj-cns/example-helm-app.git
+  targetRevision: HEAD
