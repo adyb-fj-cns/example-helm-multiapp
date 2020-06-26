@@ -18,7 +18,8 @@ sync:
 	argocd app sync example-helm-multiapp
 
 delete:
-	argocd app delete example-helm-multiapp --cascade
+	argocd app delete example-helm-multiapp 
+# --cascade  << Dont use this flag with App of Apps pattern as it potentially tries to delete resources out of order 
 
 get:
 	argocd app get example-helm-multiapp
